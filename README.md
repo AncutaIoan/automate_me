@@ -1,4 +1,6 @@
 # Ingineria Programarii
-## Echipa : Automate me
-### Participanti : Popescu Maria-Daniela(@PandaMaria),Ancuta Ioan(@AncutaIoan)
+## Team : Automate me
+### Contribution : 
+-[Ancuta Ioan](https://github.com/AncutaIoan)
+-[Popescu Maria-Daniela](https://github.com/PandaMaria)
 
