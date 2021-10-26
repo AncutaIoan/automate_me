@@ -1,2 +1,4 @@
-# automate-me
-Ingineria Programarii
+# Ingineria Programarii
+# Echipa : Automate me
+# Participanti :
+
