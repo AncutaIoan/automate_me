@@ -7,7 +7,7 @@
 -[Popescu Maria-Daniela](https://github.com/PandaMaria) <br />
 -[Stan Nicolae-Alexandru](https://github.com/Alex693878) <br />
 
-
+## Document de analiza de facut!
 
 
 
