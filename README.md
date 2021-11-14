@@ -38,6 +38,8 @@ Scopul aplicatiei este de a imbunatati atmosfera casei/apartamentului si de a co
   J - face un self-review in functie de informatiile extrase din api  <br />
   K - un camp unde utilizatorul isi pune o imagine care poate fi proiectata  <br />
   L - realizarea unei sectiune care monitorizeaza nivelul de gaze,fum (primit prin json)  <br />
+![alt text](https://github.com/AncutaIoan/automate_me/blob/main/graf.png)
+
   
 ### Cerinte functionale:
 - autorizarea in aplicatie(ex: home-owner,guest)
@@ -72,7 +74,6 @@ Scopul aplicatiei este de a imbunatati atmosfera casei/apartamentului si de a co
 - realizarea unei sectiune care monitorizeaza nivelul de gaze,fum.(primit prin json)
 - extrage informatii despre temperatura din camera si isi modifica pozitia.
 
-![alt text](https://github.com/AncutaIoan/automate_me/blob/main/graf.png)
 
 
 
