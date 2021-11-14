@@ -72,6 +72,8 @@ Scopul aplicatiei este de a imbunatati atmosfera casei/apartamentului si de a co
 - realizarea unei sectiune care monitorizeaza nivelul de gaze,fum.(primit prin json)
 - extrage informatii despre temperatura din camera si isi modifica pozitia.
 
+![alt text](https://github.com/AncutaIoan/automate_me/blob/main/graf.png)
+
 
 
 
