@@ -1,0 +1,13 @@
+server.port=8081
+spring.datasource.url = jdbc:mysql://localhost:3306/automate_me
+spring.datasource.username = root
+spring.datasource.password = Cicoare2
+spring.jpa.hibernate.ddl-auto = update
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
+
+#security
+
+security.tokenExpirationTime = 600000
+security.secret = ANA ARE MERE
+security.tokenPrefix = Bearer
+security.headerString = Authorization
