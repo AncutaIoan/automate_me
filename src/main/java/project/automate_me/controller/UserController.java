@@ -61,8 +61,7 @@ public class UserController {
                 .orElseThrow(() -> new UserNotFoundException(id));
     }
     /*
-    @PutMapping("/user/{id}")\
-    
+    @PutMapping("/user/{id}")
     User replaceUser(@RequestBody User newUser, @PathVariable Long id) {
 
         return repository.findById(id)
@@ -88,6 +87,9 @@ public class UserController {
                 });
     }
     */
+
+
+
     @DeleteMapping("/user/{id}")
     void deleteUser(@PathVariable Long id) {
         repository.deleteById(id);
