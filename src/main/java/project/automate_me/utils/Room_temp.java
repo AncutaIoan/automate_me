@@ -1,4 +1,4 @@
-package main.java.project;
+package project.automate_me.utils;
 
 public class Room_temp {
     private final String id;
