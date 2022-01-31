@@ -1,0 +1,10 @@
+{
+  "temperaturi":[
+    {
+      "bucatarie": 22.0,
+      "dormitor1": 23.5,
+      "dormitor2": 24.3,
+      "dormitor3": 25.0
+    }
+  ]
+}
