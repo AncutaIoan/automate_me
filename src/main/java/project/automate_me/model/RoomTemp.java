@@ -1,10 +1,10 @@
 package main.java.project;
 
-public class Room_temp {
+public class RoomTemp {
     private final String id;
     private final float average_temp;
 
-    public Room_temp(String id, float average_temp) {
+    public RoomTemp(String id, float average_temp) {
         this.id = id;
         this.average_temp = average_temp;
     }
