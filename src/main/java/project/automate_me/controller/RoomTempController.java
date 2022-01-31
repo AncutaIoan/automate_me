@@ -15,9 +15,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class RoomTempController {
 
-    public void selfreview(String zone, float bench)
+    public void selfreview(String zone, float bench) //primeste ca parametrii camera pentru care se doreste sa se face self-review-ul si temperatura reper
     {
-        JSONParser parser = new JSONParser();
+        JSONParser parser = new JSONParser(); //pentru parcurgere
+        JSONObject jsoncreat = new JSONObject(); //pentru self-review
         try
         {
             Object obj = parser.parse(new FileReader("tempcur.json"));
@@ -27,7 +28,6 @@ public class RoomTempController {
             while(itr1.hasNext()){
                 Map.Entry pair = itr1.next();
                 if(zone==(String)pair.getKey()){
-                    JSONObject jsoncreat = new JSONObject();
                     if((float)pair.getValue()-bench<2)
                         jsoncreat.put(pair.getKey(), "verde");
                     else if ((float)pair.getValue()-bench<5 && (float)pair.getValue()-bench >=2)
@@ -49,8 +49,7 @@ public class RoomTempController {
         }
     }
 
-    @GetMapping("/roomtemp")
-    public float roomtempaverage(@RequestParam(value="zone", defaultValue="bucatarie"), String zone)
+    public float roomtempaverage(String zone) //functie care intoarce temperatura medie intr-o camera data ca parametru
     {
         JSONParser parser = new JSONParser();
         float average_temps = 0;
