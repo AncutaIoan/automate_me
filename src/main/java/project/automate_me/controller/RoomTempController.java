@@ -1,4 +1,4 @@
-package main.java.project;
+package project.automate_me.controller;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Iterator;
