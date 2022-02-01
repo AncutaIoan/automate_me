@@ -1,2 +1,0 @@
-curl -X POST localhost:8081/register -H "Content-type:application/json" -d "{\"username\": \"Samwise Gamgee\", \"password\": \"testing\", \"role\": \"owner\"}"
-
