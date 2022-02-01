@@ -32,6 +32,6 @@ build/
 ### VS Code ###
 .vscode/
 
-properties/
-src/main/resources/security.properties/
-schema.sql/
+properties
+/src/main/resources/security.properties
+schema.sql
