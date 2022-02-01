@@ -20,9 +20,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import project.automate_me.exception.UserAlreadyAddedException;
 import project.automate_me.model.CustomUserDetails;
+import project.automate_me.model.LoginRequest;
 import project.automate_me.model.User;
 import project.automate_me.exception.UserNotFoundException;
 import project.automate_me.repository.UserRepository;
+import project.automate_me.service.UserService;
 
 
 import javax.servlet.http.HttpServletRequest;
@@ -32,64 +34,41 @@ import javax.servlet.http.HttpSession;
 public class UserController {
 
     private final UserRepository repository;
+    private final UserService userService;
 
-    UserController(UserRepository repository) {
+    public UserController(UserRepository repository, UserService userService) {
         this.repository = repository;
+        this.userService = userService;
     }
 
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
-
-
-    @GetMapping("/users")
-    List<User> all() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-
-
-        return repository.findAll();
+    public BCryptPasswordEncoder bCryptPasswordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 
+    @GetMapping("/users")
+    public List<User> all() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        return userService.getAllUsers();
+    }
 
-
-    // Single item
 
     @GetMapping("/user/{id}")
     User one(@PathVariable Long id) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        return repository.findById(id)
-                .orElseThrow(() -> new UserNotFoundException(id));
+        return userService.getUserById(id);
     }
-    /*
-    @PutMapping("/user/{id}")\
-    
-    User replaceUser(@RequestBody User newUser, @PathVariable Long id) {
 
-        return repository.findById(id)
-                .map(user -> {
-                    user.setName(newUser.getName());
-                    try {
-                        user.setPassword(GeneratePassword.GenerateHash(newUser.getPassword()));
-                    } catch (NoSuchAlgorithmException e) {
-                        e.printStackTrace();
-                    }
-                    return repository.save(user);
-                })
-                .orElseGet(() -> {
-                    newUser.setId(id);
-                    String hash= null;
-                    try {
-                        hash = GeneratePassword.GenerateHash(newUser.getPassword());
-                    } catch (NoSuchAlgorithmException e) {
-                        e.printStackTrace();
-                    }
-                    newUser.setPassword(hash);
-                    return repository.save(newUser);
-                });
+    @PutMapping("/user/{id}")
+    User replaceUser(@RequestBody User newUser, @PathVariable Long id) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        return userService.updateUser(newUser,id);
     }
-    */
+
     @DeleteMapping("/user/{id}")
     void deleteUser(@PathVariable Long id) {
-        repository.deleteById(id);
+        userService.deleteUser(id);
     }
 }

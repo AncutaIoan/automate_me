@@ -1,16 +1,18 @@
 package project.automate_me.model;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+
 @Entity
 public class User{
 
     private @Id @GeneratedValue Long id;
     private String username;
     private String password;
-
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private Set<SmartWindow> smartWindows;
     public User() {
     }
 
@@ -18,6 +20,7 @@ public class User{
 
         this.username = username;
         this.password = password;
+        smartWindows = new HashSet<>();
     }
 
     public Long getId() {

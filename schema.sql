@@ -5,7 +5,7 @@ create table user
     username varchar(255) not null,
     password varchar(255) not null
 );
-create table window
+create table smartWindow
 (
     id       int auto_increment
         primary key,

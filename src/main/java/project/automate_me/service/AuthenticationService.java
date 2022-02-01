@@ -1,5 +1,6 @@
 package project.automate_me.service;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -13,6 +14,7 @@ import project.automate_me.model.User;
 import project.automate_me.repository.UserRepository;
 
 @Service
+
 public class AuthenticationService {
     UserRepository userRepository;
     BCryptPasswordEncoder bCryptPasswordEncoder;
