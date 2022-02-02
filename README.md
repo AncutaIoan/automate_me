@@ -32,10 +32,8 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    
   </ol>
 </details>
 
@@ -70,14 +68,14 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-MySQL 
-Any endpoint testing IDE ( for example: Postman)
-Installing Mosquitto 
+<br>MySQL</br> 
+<br>Any endpoint testing IDE ( for example: Postman)</br>
+<br>Installing Mosquitto </br>
 
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+
 
 1. Get a free API Key at [https://openweathermap.org/api](https://example.com)
 2. Create MySQL database using any IDE ( MySQL Workbench).
