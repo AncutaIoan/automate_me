@@ -43,7 +43,7 @@
 ## About The Project
 
 Scopul aplicatiei este de a imbunatati atmosfera casei/apartamentului si de a controla volumul de lumina dintr-o incapere, oferind proprietarului posibilitatea de a avea control complet.
-
+[Wiki](https://github.com/AncutaIoan/automate_me/wiki)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
