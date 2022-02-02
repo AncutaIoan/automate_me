@@ -1,82 +1,177 @@
-# Ingineria Programarii
-## Team : Automate me
-### Contribution : <br />
--[Ancuta Ioan](https://github.com/AncutaIoan) <br />
--[Anita Tudor-Alexandru](https://github.com/AnitaTudor) <br />
--[Olteanu Cosmin-Daniel](https://github.com/OlteanuCosmin) <br />
--[Popescu Maria-Daniela](https://github.com/PandaMaria) <br />
--[Stan Nicolae-Alexandru](https://github.com/Alex693878) <br />
-
-## Document de analiza
-
-### Scop
-Scopul aplicatiei este de a imbunatati atmosfera casei/apartamentului, oferind proprietarului posibilitatea de a avea control complet.
-### Obiective
-* posibilitatea de a prelua date din mediul inconjurator(temperatura, umiditate).Atat din camera in care este pozitionat SmartWindow cat si din climatul de afara.
-* posibilitatea de self-review pentru a oferi utilizatorul o experienta completa (exemplu : fereastra a pastrat o temperatura potrivita pentru locul in care este amplasata).
-* proiectarea diferitelor imagine pe sticla ferestrei ( exemplu peisaje, poze artistice, etc.).
-* existenta unei functii de detectare a nivelul de gaze si fum si sa actioneze corespunzator.
-* setarea automata in functie de temperatura incaperii si de temperatura de afara.
-* setarea pozitiei SmartWindow de catre utilizator
-* autentificarea/inregistrarea utilizatorului in aplicatie 
-### Grup tinta
-* Ca persoana in varsta/cu dizabilitati vreau sa imi pot controla ferestrele din apartament/casa fara prea mult efort.
-* Ca parinte vreau sa asigur atmosfera placuta din camera copilului meu chiar si cand nu sunt acasa.
-* Ca gamer imi doresc sa am geam avand culori cat mai atractive (RGB) pentru atmosfera din camera.
-* Ca angajat imi doresc sa deschid/inchid geamurile sau sa garantez o atmosfera cat mai relaxanta in camera fara sa ma ridic de la birou.
-* Ca detinator de animale de companie, vreau sa ma asigur ca animalele de companie stau in conditii bune dpdv al aerului cand sunt plecat de acasa.
-* Ca home-owner, vreau sa detin mai mult acces decat alti guests asupra ferestrei si sa ma asigur ca locuinta mea este in siguranta dpdv al nivelului de gaze si fum, atat de afara cat si din incapere.
-### Colectarea cerintelor 
-  A - login endpoint  <br />
-  B - register endpoint  <br />
-  C - extrage informatii despre temperatura din camera si isi modifica pozitia  <br />
-  D - baza de date pentru stocarea diferitelor inputuri din mediul inconjurator(exemplu: temperatura in functie de camera,temperatura de afara,nivelul de gaze si fum)<br/>
-  E - baza de date destinata stocarii setarilor curente ale ferestrei  <br />
-  F - un user poate seta pozitionarea geamului  <br />
-  G - extrage informatii despre climat si vreme dintr-un API public in functie de orasul in care se afla geamul  <br />
-  H - endpointuri care adauga/updateaza in baza de date  informatiile extrase din API public<br />
-  I - extrage informatii dintr-un api despre temperatura dorita a camerei (stocata in baza de date desemnata temperaturii interioare)  <br /> 
-  J - face un self-review in functie de informatiile extrase din api(temperatura interioara mentionata) <br />
-  K - un camp unde utilizatorul isi pune o imagine care poate fi proiectata  <br />
-  L - realizarea unei sectiuni care monitorizeaza nivelul de gaze,fum (gasit in baza de date)  <br />
-![alt text](https://github.com/AncutaIoan/automate_me/blob/main/graf.png)
-
-  
-### Cerinte functionale:
-- un user poate seta pozitionarea geamului 
-- un camp unde utilizatorul isi pune o imagine care poate fi proiectata
-- realizarea unei sectiuni care monitorizeaza nivelul de gaze,fum (gasit in baza de date)
-- extrage informatii despre temperatura din camera si isi modifica pozitia.
-### Cerinte non-functionale:
-- login endpoint
-- register endpoint
-- endpointuri care adauga/updateaza in baza de date  informatiile extrase din API public
-- baza de date destinata stocarii setarilor curente ale ferestrei
-- baza de date pentru stocarea diferitelor inputuri din mediul inconjurator(exemplu: temperatura in functie de camera,temperatura de afara,nivelul de gaze si fum)
-- extrage informatii despre climat si vreme dintr-un API public in functie de orasul in care se afla geamul
-- extrage informatii dintr-un api despre temperatura dorita a camerei (stocata in baza de date desemnata temperaturii interioare) 
-- face un self-review in functie de informatiile extrase din api(temperatura interioara mentinuta)
-### Cerinte care tin de securitate, modificarile ferestrei:
-- login endpoint
-- register endpoint
-- un user poate seta pozitionarea geamului 
-- extrage informatii despre temperatura din camera si isi modifica pozitia.
-- realizarea unei sectiuni care monitorizeaza nivelul de gaze,fum (gasit in baza de date)
-### Cerinte care tin de stocarea datelor:
-- baza de date destinata stocarii setarilor curente ale ferestrei
-- baza de date pentru stocarea diferitelor inputuri din mediul inconjurator(exemplu: temperatura in functie de camera,temperatura de afara,nivelul de gaze si fum)
-- endpointuri care adauga/updateaza in baza de date  informatiile extrase din API public
-- un camp unde utilizatorul isi poate pune o imagine care o sa fie proiectata
-
-### Cerinte care tin de procesare:
-- extrage informatii despre climat si vreme dintr-un API public in functie de orasul in care se afla geamul
-- extrage informatii dintr-un api despre temperatura dorita a camerei (stocata in baza de date desemnata temperaturii interioare)
-- face un self-review in functie de informatiile extrase din api(temperatura interioara mentinuta)
-- realizarea unei sectiuni care monitorizeaza nivelul de gaze,fum (gasit in baza de date)
-- extrage informatii despre temperatura din camera si isi modifica pozitia.
+<div id="top"></div>
 
 
 
+
+<br />
+<div align="center">
+
+  <h3 align="center">Automate me</h3>
+
+
+</div>
+
+
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
+
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+Scopul aplicatiei este de a imbunatati atmosfera casei/apartamentului si de a controla volumul de lumina dintr-o incapere, oferind proprietarului posibilitatea de a avea control complet.
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+### Built With
+
+* [Java](https://www.java.com/en/)
+* [Spring Boot](https://spring.io/projects/spring-boot)
+* [MySQL](https://www.mysql.com/)
+* [Mosquitto](https://mosquitto.org/)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+MySQL 
+Any endpoint testing IDE ( for example: Postman)
+Installing Mosquitto 
+
+
+### Installation
+
+_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+
+1. Get a free API Key at [https://openweathermap.org/api](https://example.com)
+2. Create MySQL database using any IDE ( MySQL Workbench).
+3. Open postman and write endpoints for testing.
+4. Install Mosquitto for your machine and open server locally.Modify config.conf
+      ```sh
+       listener 1883
+       allow_anonymous true
+       ```
+   And Start server in cmd:
+   ```sh
+        mosquitto -v -c config.conf
+   ```
+5. Modify resources/application.properties and security.properties 
+    ```sh
+   #application.properties
+   server.port=8081
+   spring.datasource.url = jdbc:mysql://localhost:3306/automate_me
+   spring.datasource.username = root
+   spring.datasource.password = password
+   spring.jpa.hibernate.ddl-auto = update
+   spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
+   
+   #application.security
+   
+   security.tokenExpirationTime = 600000
+   security.secret = ANA ARE MERE
+   security.tokenPrefix = Bearer
+   security.headerString = Authorization
+   ```
+6. Clone the repo
+   ```sh
+   git clone https://github.com/AncutaIoan/automate_me.git
+   ```
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+
+Register endpoint
+![alt text](https://github.com/AncutaIoan/automate_me/blob/main/images_doc/register.png)
+
+Login endpoint 
+![alt text](https://github.com/AncutaIoan/automate_me/blob/main/images_doc/login.png)
+
+Get all users endpoint
+![alt text](https://github.com/AncutaIoan/automate_me/blob/main/images_doc/get_all_users.png)
+
+Get weather endpoint
+![alt text](https://github.com/AncutaIoan/automate_me/blob/main/images_doc/get_weather.png)
+
+Add window endpoint 
+![alt text](https://github.com/AncutaIoan/automate_me/blob/main/images_doc/addWindow.png)
+
+Set position endpoint 
+![alt text](https://github.com/AncutaIoan/automate_me/blob/main/images_doc/set_position.png)
+
+
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+ 
+
+
+<!-- ROADMAP -->
+## Roadmap
+
+
+
+See the [open issues](https://github.com/AncutaIoan/automate_me/issues) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+
+
+
+
+
+
+<!-- CONTACT -->
+## Contact
+
+
+Project Link: [https://github.com/AncutaIoan/automate_me](https://github.com/your_username/repo_name)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
