@@ -81,9 +81,10 @@ To get a local copy up and running follow these simple example steps.
 2. Create MySQL database using any IDE ( MySQL Workbench).
 3. Open postman and write endpoints for testing.
 4. Install Mosquitto for your machine and open server locally.Modify config.conf
-   ```sh
-      listener 1883
-      allow_anonymous true
+   ```
+   sh
+   listener 1883
+   llow_anonymous true
    ```
    And Start server in cmd:
    ```
